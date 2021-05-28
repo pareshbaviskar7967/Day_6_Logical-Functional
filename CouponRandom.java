@@ -19,15 +19,16 @@ class CouponRandom {
         int distinct = 0;
 
         while (distinct < no) {
+            System.out.println("Random : " + getCoupon(no));
             int value = getCoupon(no);
             count++;
-            if (!isCollected[value]) {
+            if (isCollected[value] == false) {
                 distinct++;
                 isCollected[value] = true;
             }
         }
         System.out.println(count);
-        System.out.println(
-                " Random function is called : " + count + " times, \nFor generating " + no + " Distinct coupons.");
+        System.out.println(" Random function is called : " + count + " times");
+        System.out.println("For generating " + no + " Distinct coupons.");
     }
 }
